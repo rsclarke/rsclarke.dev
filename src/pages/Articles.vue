@@ -2,7 +2,7 @@
   <Layout>
     
     <p>
-      Will put the latest items from articles/bugs here
+      Paginate articles, 10 per page?
     </p>
 
   </Layout>
@@ -11,7 +11,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Security Researcher'
+    title: 'Latest Articles'
   }
 }
 </script>

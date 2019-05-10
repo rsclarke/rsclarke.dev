@@ -2,7 +2,7 @@
   <Layout>
     
     <p>
-      Will put the latest items from articles/bugs here
+        Whois page.  Might consider a CV component pulling in from JSON?
     </p>
 
   </Layout>
@@ -11,7 +11,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Security Researcher'
+    title: 'About'
   }
 }
 </script>
