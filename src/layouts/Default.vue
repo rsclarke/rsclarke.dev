@@ -1,9 +1,15 @@
 <template>
-  <div class="bg-red">
+  <div class="bg-red font-mono">
     <header>
       <strong>
-        <g-link to="/"><span class="font-mono">{{ $static.metaData.siteName }}</span></g-link>
+        <g-link to="/">rsclarke</g-link>
       </strong>
+      <nav>
+        <a href="#"><font-awesome-icon :icon="['fab', 'github']" /></a>
+        <a href="#"><font-awesome-icon :icon="['fab', 'dev']" /></a>
+        <a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+        <a href="#"><font-awesome-icon :icon="['fab', 'keybase']" /></a>
+      </nav>
       <nav class="nav">
         <g-link to="/articles">articles</g-link>
         <g-link to="/bugs">bugs</g-link>

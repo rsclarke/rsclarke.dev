@@ -5,9 +5,17 @@ require('typeface-ubuntu-mono')
 
 import '~/assets/base.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithub, faDev, faTwitter, faKeybase } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faGithub, faDev, faTwitter, faKeybase)
+
+
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.component('font-awesome-icon', FontAwesomeIcon)
 }
