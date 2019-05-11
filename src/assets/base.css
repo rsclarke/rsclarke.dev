@@ -1,3 +1,12 @@
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
+
+.bg-img {
+    background-image: url("../assets/bg.png");
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+}
