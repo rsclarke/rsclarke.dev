@@ -6,10 +6,11 @@ require('typeface-ubuntu-mono')
 import '~/assets/base.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGithub, faDev, faTwitter, faKeybase } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faDev, faTwitter, faKeybase,  faCreativeCommons, faCreativeCommonsBy } from '@fortawesome/free-brands-svg-icons'
+import { faSitemap, faRss } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faGithub, faDev, faTwitter, faKeybase)
+library.add(faGithub, faDev, faTwitter, faKeybase, faCreativeCommons, faCreativeCommonsBy, faSitemap, faRss)
 
 
 import DefaultLayout from '~/layouts/Default.vue'

@@ -1,7 +1,7 @@
 <template>
   <Layout>
     
-    <p>
+    <p class="text-xl">
       Will put the latest items from articles/bugs here
     </p>
 

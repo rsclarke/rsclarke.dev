@@ -1,15 +1,15 @@
 <template>
   <div class="container mx-auto">
+
+   
     <header class="flex flex-wrap items-center">
       
-      <!-- logo -->
+       <!-- logo -->
       <div class="flex-no-shrink">
         <g-link to="/">
           <g-image src="~/assets/me.jpg" immediate="true" class="border-4 border-light border-solid rounded-full h-32 w-32 p-1"/>
         </g-link>
       </div>
-
-
 
       <div class="flex flex-col ml-4">
       <!-- name -->
@@ -19,12 +19,12 @@
 
       <!-- social icons -->
       <div>
-        <nav class="text-2xl flex justify-between">
-          <a href="#" class="text-red"><font-awesome-icon :icon="['fab', 'github']" /></a>
-          <a href="#" class="text-yellow"><font-awesome-icon :icon="['fab', 'dev']" /></a>
-          <a href="#" class="text-blue"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
-          <a href="#" class="text-green"><font-awesome-icon :icon="['fab', 'keybase']" /></a>
-        </nav>
+        <aside class="text-2xl flex justify-between pl-1 pr-1">
+          <a href="https://github.com/rsclarke" title="@rsclarke on GitHub" class="text-red"><font-awesome-icon :icon="['fab', 'github']" /></a>
+          <a href="https://dev.to/rsclarke" title="@rsclarke on DEV" class="text-yellow"><font-awesome-icon :icon="['fab', 'dev']" /></a>
+          <a href="https://twitter.com/rsclarke" title="@rsclarke on Twitter" class="text-blue"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+          <a href="https://keybase.io/rsclarke" title="rsclarke on Keybase" class="text-green"><font-awesome-icon :icon="['fab', 'keybase']" /></a>
+        </aside>
       </div>
 
       </div>
@@ -35,13 +35,24 @@
           <g-link to="/articles" class="text-red">articles</g-link>
           <g-link to="/bugs" class="text-yellow ml-8">bugs</g-link>
           <g-link to="/code" class="text-blue ml-8">code</g-link>
-          <g-link to="/whois" class="text-green ml-8">whois</g-link>
+          <g-link to="/about" class="text-green ml-8">about</g-link>
+          <a href="#" title="RSS" class="text-light text-sm ml-8"><font-awesome-icon :icon="['fas', 'rss']" /></a>
+          <a href="#" title="Sitemap" class="text-light text-sm ml-8"><font-awesome-icon :icon="['fas', 'sitemap']" /></a>
         </nav>
       </div>
     </header>
-    <slot/>
+    <div class="ml-32 pl-4 pt-2 pb-2 pr-24 text-xl">
+      <slot/>
+    </div>
     <footer>
-
+      <div class="flex">
+      <div class="ml-32 pl-4 pt-4">
+        <a href="https://creativecommons.org/licenses/by/4.0/" class="text-light" >
+          <font-awesome-icon :icon="['fab', 'creative-commons']"/>
+        <font-awesome-icon :icon="['fab', 'creative-commons-by']" class="ml-2"/>
+        </a>
+      </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -55,5 +66,6 @@ query {
 </static-query>
 
 <style>
+
 
 </style>
