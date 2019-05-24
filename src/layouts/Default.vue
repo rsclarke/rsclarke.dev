@@ -45,10 +45,10 @@
       <slot/>
     </div>
     <footer>
-      <div class="flex pt-4 ml-32 pl-4 pr-24 justify-between">
+      <div class="flex pt-4 ml-32 mb-2 pl-4 pr-24 justify-between">
         <div class="">
           <p>
-            Subscribe with <a href="#" title="rsclarke on Patreon" class="text-red"><font-awesome-icon :icon="['fab', 'patreon']" /></a> to support projects and new content.
+            Subscribe with <a href="#" title="rsclarke on Patreon" class="text-light"><font-awesome-icon :icon="['fab', 'patreon']" /></a> to support projects and new content.
           </p>
         </div>
         <div class="">
