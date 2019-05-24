@@ -45,13 +45,21 @@
       <slot/>
     </div>
     <footer>
-      <div class="flex">
-      <div class="ml-32 pl-4 pt-4">
-        <a href="https://creativecommons.org/licenses/by/4.0/" class="text-light" >
-          <font-awesome-icon :icon="['fab', 'creative-commons']"/>
-        <font-awesome-icon :icon="['fab', 'creative-commons-by']" class="ml-2"/>
-        </a>
-      </div>
+      <div class="flex pt-4 ml-32 pl-4 pr-24 justify-between">
+        <div class="">
+          <p>
+            Subscribe with <a href="#" title="rsclarke on Patreon" class="text-red"><font-awesome-icon :icon="['fab', 'patreon']" /></a> to support projects and new content.
+          </p>
+        </div>
+        <div class="">
+          <p class="text-light">
+            Made with <font-awesome-icon :icon="['fas', 'heart']" class="text-red"/> under 
+            <a href="https://creativecommons.org/licenses/by/4.0/" class="text-light" title="Creative Commons - Attribution 4.0 International (CC BY 4.0)" >
+              <font-awesome-icon :icon="['fab', 'creative-commons']"/>
+              <font-awesome-icon :icon="['fab', 'creative-commons-by']" class="ml-2"/>
+            </a>.
+          </p>
+        </div>
       </div>
     </footer>
   </div>
