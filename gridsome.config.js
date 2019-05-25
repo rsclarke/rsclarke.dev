@@ -8,6 +8,7 @@
 const tailwind = require('tailwindcss')
 
 module.exports = {
+  host: "0.0.0.0",
   siteName: 'rsclarke.dev',
   siteUrl: 'https://rsclarke.dev',
   siteDescription: 'Security research published by Richard Clarke (@rsclarke)',
