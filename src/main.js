@@ -21,6 +21,6 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('font-awesome-icon', FontAwesomeIcon)
 
   head.bodyAttrs = {
-    class: 'bg-dark bg-img font-mono text-light pt-4 pl-4 pr-4'
+    class: 'bg-dark bg-img font-mono text-light p-4'
   }
 }
