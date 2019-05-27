@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto md:pr-32">
+  <div class="container mx-auto md:pr-24">
 
     <Header />
 
