@@ -1,6 +1,7 @@
 ---
 title: Markdown test file
-date: 2019-02-06
+slug: markdown
+date: 2019-02-07
 published: true
 tags: ['Markdown','Test files']
 canonical_url: false

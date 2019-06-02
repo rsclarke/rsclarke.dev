@@ -1,15 +1,15 @@
 <template>
    <Layout>
      <article>
-       <PostHeader :post="$page.article" />
-       <div v-html="$page.article.content" />
+       <PostHeader :post="$page.vuln" />
+       <div v-html="$page.vuln.content" />
      </article>
    </Layout>
 </template>
 
 <page-query>
-query Article ($path: String!) {
-  article: article (path: $path) {
+query Vuln ($path: String!) {
+  vuln: vuln (path: $path) {
     title
     description
     content
@@ -33,12 +33,12 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.$page.article.title,
+      title: this.$page.vuln.title,
       meta: [
         {
           key: 'description',
           name: 'description',
-          content: this.$page.article.description
+          content: this.$page.vuln.description
         }
       ]
     }
@@ -48,6 +48,6 @@ export default {
 
 <style>
 h1, h2, h3, h4, h5, h6 {
-  @apply text-red;
+  @apply text-yellow;
 }
 </style>

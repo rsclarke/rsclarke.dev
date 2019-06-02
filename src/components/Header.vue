@@ -28,7 +28,7 @@
           <a
             href="https://github.com/rsclarke"
             title="@rsclarke on GitHub"
-            target="_blank"
+            rel="noopener noreferrer"
             class="text-red"
           >
             <font-awesome-icon :icon="['fab', 'github']"/>
@@ -36,7 +36,7 @@
           <a
             href="https://dev.to/rsclarke"
             title="@rsclarke on DEV"
-            target="_blank"
+            rel="noopener noreferrer"
             class="text-yellow"
           >
             <font-awesome-icon :icon="['fab', 'dev']"/>
@@ -44,7 +44,7 @@
           <a
             href="https://twitter.com/rsclarke"
             title="@rsclarke on Twitter"
-            target="_blank"
+            rel="noopener noreferrer"
             class="text-blue"
           >
             <font-awesome-icon :icon="['fab', 'twitter']"/>
@@ -52,7 +52,7 @@
           <a
             href="https://keybase.io/rsclarke"
             title="rsclarke on Keybase"
-            target="_blank"
+            rel="noopener noreferrer"
             class="text-green"
           >
             <font-awesome-icon :icon="['fab', 'keybase']"/>
@@ -65,7 +65,7 @@
     <div class="md:ml-auto pt-4 md:pt-0">
       <nav class="text-xl">
         <g-link to="/articles" class="text-red">articles</g-link>
-        <g-link to="/bugs" class="text-yellow ml-8">bugs</g-link>
+        <g-link to="/vulns" class="text-yellow ml-8">vulns</g-link>
         <g-link to="/code" class="text-blue ml-8">code</g-link>
         <g-link to="/about" class="text-green ml-8">about</g-link>
       </nav>

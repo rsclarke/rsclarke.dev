@@ -6,13 +6,10 @@
 
 
 const tailwind = require('tailwindcss')
-
 const stringify = require('rehype-stringify')
-
 const path = require('path')
 
 module.exports = {
-  host: "0.0.0.0",
   siteName: 'rsclarke.dev',
   siteUrl: 'https://rsclarke.dev',
   siteDescription: 'Security research published by Richard Clarke (@rsclarke)',
@@ -24,11 +21,11 @@ module.exports = {
       options: {
         path: 'content/articles/**/*.md',
         typeName: 'Article',
-        route: '/article/:slug',
+        route: '/articles/:slug',
         refs: {
           tags: {
-            typeName: 'Tag',
-            route: '/tag/:id',
+            typeName: 'Hashtag',
+            route: '/hashtags/:id',
             create: true,
           }
         }
@@ -37,13 +34,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/bugs/**/*.md',
-        typeName: 'Bug',
-        route: '/bug/:slug',
+        path: 'content/vulns/**/*.md',
+        typeName: 'Vuln',
+        route: '/vulns/:slug',
         refs: {
           tags: {
-            typeName: 'Tag',
-            route: '/tag/:id',
+            typeName: 'Hashtag',
+            route: '/hashtags/:id',
             create: true,
           }
         }
@@ -52,35 +49,12 @@ module.exports = {
   ],
   transformers: {
     remark: {
-      //useBuiltIns: false,
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
+      externalLinksRel: ['noopener', 'noreferrer'],
       stringifier: stringify,
       plugins: [
         [ 'remark-rehype', {allowDangerousHTML: true}],
         [ 'rehype-raw' ],
         [ 'rehype-shiki', {theme: path.resolve('src/assets', 'rsclarke.tmTheme'), useBackground: false}],
-        [ 'rehype-add-classes', {
-            a: 'text-blue',
-            blockquote: 'ml-4 pl-4 pr-8 mb-4 border-l-4 border-light border-solid rounded',
-            p: 'tracking-wide text-justify leading-relaxed mb-4',
-            'h1,h2,h3,h4,h5,h6': 'tracking-wider font-normal text-red mb-4',
-            h1: 'text-4xl',
-            h2: 'text-3xl',
-            h3: 'text-2xl',
-            'h4,h5,h6': 'text-xl font-medium',
-            pre: 'p-4 mb-4 text-xl',
-            code: 'font-mono',
-            'p > code': ' text-xl bg-light text-dark rounded p-1',
-            'h1 > code': 'bg-light text-dark rounded p-1',
-            'h2 > code': 'bg-light text-dark rounded p-1',
-            'h3 > code': 'bg-light text-dark rounded p-1',
-            'h4 > code': 'bg-light text-dark rounded p-1',
-            'h5 > code': 'bg-light text-dark rounded p-1',
-            'h6 > code': 'bg-light text-dark rounded p-1',
-            'ul,ol': 'mb-4'
-        }]        
       ]
     }
   },

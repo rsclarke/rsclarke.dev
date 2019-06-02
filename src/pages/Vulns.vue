@@ -11,7 +11,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Latest Bugs'
+    title: 'Latest Vulnerabilities'
   }
 }
 </script>

@@ -1,34 +1,33 @@
 <template>
-  <footer class="flex-wrap justify-center text-center">
+  <footer class="flex-wrap justify-center text-center text-light">
       <div>
-        <p>
           Back through
           <a
             href="https://www.patreon.com/rsclarke"
             title="rsclarke on Patreon"
-            target="_blank"
+            rel="noopener noreferrer"
             class="text-light"
           >
             <font-awesome-icon :icon="['fab', 'patreon']"/>
           </a> to support new content.
-        </p>
       </div>
       <div>
-        <p class="text-light">
           Made with
           <font-awesome-icon :icon="['fas', 'heart']" class="text-red"/> under
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank"
+            rel="noopener noreferrer"
             class="text-light"
             title="Creative Commons - Attribution 4.0 International (CC BY 4.0)"
           >
             <font-awesome-icon :icon="['fab', 'creative-commons']"/>
             <font-awesome-icon :icon="['fab', 'creative-commons-by']" class="ml-2"/>
           </a>.
-        </p>
       </div>
       <div class="tracking-widest">
+        <g-link to="/hashtags" class="text-light text-sm">
+           <font-awesome-icon :icon="['fas', 'hashtag']"/>
+        </g-link> &nbsp;
         <a href="#" title="RSS" class="text-light text-sm">
           <font-awesome-icon :icon="['fas', 'rss']"/>
         </a> &nbsp;
