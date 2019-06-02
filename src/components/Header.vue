@@ -63,7 +63,7 @@
 
     <!-- menu -->
     <div class="md:ml-auto pt-4 md:pt-0">
-      <nav class="text-xl ">
+      <nav class="text-xl">
         <g-link to="/articles" class="text-red">articles</g-link>
         <g-link to="/bugs" class="text-yellow ml-8">bugs</g-link>
         <g-link to="/code" class="text-blue ml-8">code</g-link>

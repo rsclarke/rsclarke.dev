@@ -12,16 +12,21 @@
     "@fortawesome/free-regular-svg-icons": "^5.8.2",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/vue-fontawesome": "^0.1.6",
-    "@gridsome/source-filesystem": "^0.3.0",
-    "gridsome": "^0.5.0",
+    "@gridsome/source-filesystem": "^0.5.0",
+    "gridsome": "^0.6.3",
     "gridsome-plugin-remark-shiki": "^0.3.0",
+    "rehype-add-classes": "^1.0.0",
+    "rehype-raw": "^4.0.0",
+    "rehype-shiki": "file:../rehype-shiki",
+    "rehype-stringify": "^5.0.0",
+    "remark-parse": "^6.0.3",
+    "remark-rehype": "^4.0.0",
     "typeface-ubuntu-mono": "0.0.72"
   },
   "devDependencies": {
-    "@gridsome/transformer-remark": "^0.2.1",
+    "@gridsome/transformer-remark": "^0.3.2",
     "postcss": "^7.0.16",
     "postcss-loader": "^3.0.0",
-    "tailwindcss": "^0.7.4",
-    "tailwindcss-grid": "^1.2.1"
+    "tailwindcss": "^0.7.4"
   }
 }

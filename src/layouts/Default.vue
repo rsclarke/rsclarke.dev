@@ -34,7 +34,4 @@ query {
 }
 </static-query>
 
-<style>
-
-
-</style>
+<style src="../assets/base.css" />
