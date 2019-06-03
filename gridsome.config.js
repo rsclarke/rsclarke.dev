@@ -62,7 +62,7 @@ module.exports = {
     loaderOptions: {
       postcss: {
         plugins: [
-          tailwind('./tailwind.js')
+          tailwind('./tailwind.config.js')
         ]
       }
     }

@@ -1,6 +1,7 @@
 ---
-title: Markdown test file
-date: 2019-07-06
+title: Markdown test file 2
+slug: markdown2
+date: 2019-02-07
 published: true
 tags: ['Markdown','Test files']
 canonical_url: false
@@ -50,12 +51,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
-
-* Here
-* is
-* a
-* new 
-* list
 
 
 ## Links
