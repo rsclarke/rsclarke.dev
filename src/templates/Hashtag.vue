@@ -10,14 +10,22 @@
             <PostMeta :post="edge.node" />
           <p>{{edge.node.description}} <g-link :to="edge.node.path">…continue</g-link></p>
       </div>
+
+      <Pageit :pageInfo="$page.hashtag.belongsTo.pageInfo" />
+     
   </Layout>
 </template>
 
 <page-query>
-query Tag($id: String!) {
+query Tag($id: String!, $page: Int) {
   hashtag(id: $id) {
     title
-    belongsTo {
+    belongsTo(page: $page, perPage: 10) @paginate {
+      totalCount
+      pageInfo {
+        totalPages
+        currentPage
+      }
       edges {
         node {
           __typename
@@ -53,10 +61,12 @@ query Tag($id: String!) {
 </page-query>
 
 <script>
+import Pageit from '~/components/Pageit'
 import PostMeta from '~/components/PostMeta'
 export default {
     components:{
-        PostMeta
+        PostMeta,
+        Pageit
     }
 }
 </script>
