@@ -3,11 +3,7 @@
     <h1 class="text-light"><font-awesome-icon :icon="['fas', 'hashtag']" class="mr-2 text-light"/>{{ $page.hashtag.title }}</h1>
     
       <div v-for="edge in $page.hashtag.belongsTo.edges" :key="edge.node.id">
-        <g-link :to="edge.node.path">
-          <h2 v-if="edge.node.__typename === 'Article'" class="text-red mb-2">{{edge.node.title }}</h2>
-          <h2 v-else-if="edge.node.__typename === 'Vuln'" class="text-yellow mb-2">{{edge.node.title}}</h2>
-           </g-link>
-            <PostMeta :post="edge.node" />
+          <PostHeader :post="edge.node" />
           <p>{{edge.node.description}} <g-link :to="edge.node.path">…continue</g-link></p>
       </div>
 
@@ -62,10 +58,10 @@ query Tag($id: String!, $page: Int) {
 
 <script>
 import Pageit from '~/components/Pageit'
-import PostMeta from '~/components/PostMeta'
+import PostHeader from '~/components/PostHeader'
 export default {
     components:{
-        PostMeta,
+        PostHeader,
         Pageit
     }
 }

@@ -10,6 +10,7 @@
 <page-query>
 query Article ($path: String!) {
   article: article (path: $path) {
+    __typename
     title
     description
     content

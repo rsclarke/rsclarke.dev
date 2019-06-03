@@ -1,22 +1,18 @@
 <template>
     <div>
-        <div>
-            <template v-if="post.title">
-                <div class="">
-                    <h1 class="mb-2">{{ post.title }}</h1>
-                </div>
-            </template>
-        </div>
+        <PostTitle :post="post" />
         <PostMeta :post="post" />
     </div>
 </template>
 
 <script>
+import PostTitle from '~/components/PostTitle'
 import PostMeta from '~/components/PostMeta'
 
 export default {
     components: {
-    PostMeta,
+        PostTitle,
+        PostMeta
   },
     props: ['post']
 }

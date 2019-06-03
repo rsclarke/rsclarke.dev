@@ -10,6 +10,7 @@
 <page-query>
 query Vuln ($path: String!) {
   vuln: vuln (path: $path) {
+    __typename
     title
     description
     content
