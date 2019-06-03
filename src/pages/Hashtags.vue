@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>Hashtags</h1>
+    <h1 class="text-light">Hashtags</h1>
 
     <p>
       <template v-if="$page.hashtags.edges">
@@ -36,13 +36,11 @@ query Hashtags {
 <script>
 export default {
   metaInfo: {
-    title: "hashtags"
+    title: "Hashtags"
   }
 };
 </script>
 
 <style>
-h1 {
-  @apply text-light;
-}
+
 </style>

@@ -1,6 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .bg-img {
     background-image: url("../assets/bg.png");
@@ -107,3 +105,6 @@ th,td {
 tr {
     @apply leading-loose;
 }
+
+@tailwind components;
+@tailwind utilities;

@@ -1,7 +1,7 @@
 <template>
   <Layout>
     
-    <h1 class="text-4xl tracking-wider text-green font-normal mb-4">about</h1>
+    <h1 class="text-green">about</h1>
 
     <div class="sm:flex-wrap md:flex ">
     <div>
@@ -27,7 +27,7 @@
       Previously I spent over 6 years in the telecoms industry, working with large scale embedded real time systems discovering and reporting vulnerabilities to help keep national infrastructure secure. The work focused primarily on source code review, reverse engineering and fuzzing in order to discover vulnerabilities.
     </p>
 
-    <h2>Patreon</h2>
+    <h2 class="text-green">Patreon</h2>
 
     <p>
       All projects that I publish on <a href="https://github.com/rsclarke" rel="noopener noreferrer">GitHub</a> fall under open source licensing and are free to use.
@@ -51,7 +51,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'about'
+    title: 'About'
   }
 }
 </script>
@@ -60,5 +60,4 @@ export default {
 h1, h2, h3, h4, h5, h6 {
   @apply text-green;
 }
-
 </style>
