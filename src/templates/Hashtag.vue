@@ -63,7 +63,13 @@ export default {
     components:{
         PostHeader,
         Pageit
-    }
+    },
+    metaInfo() {
+      return {
+        title: '#' + this.$page.hashtag.title
+      }
+      
+  }
 }
 </script>
 
