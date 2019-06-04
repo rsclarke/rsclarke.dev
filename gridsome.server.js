@@ -10,5 +10,7 @@ const moment = require('moment')
 module.exports = function (api) {
   api.loadSource(store => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
+    const authors = store.addContentType('Author')
+    const rsclarke = authors.addNode({id: 'rsclarke'})
   })
 }

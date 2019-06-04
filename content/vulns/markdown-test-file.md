@@ -1,6 +1,7 @@
 ---
 title: Markdown test file
 slug: markdown
+author: rsclarke
 date: 2019-02-07
 published: true
 tags: ['Markdown','Test files']

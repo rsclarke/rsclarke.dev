@@ -1,9 +1,6 @@
 <template>
    <Layout>
-     <article>
-       <PostHeader :post="$page.vuln" />
-       <div v-html="$page.vuln.content" />
-     </article>
+     <Post :post="$page.vuln" />
    </Layout>
 </template>
 
@@ -26,11 +23,11 @@ query Vuln ($path: String!) {
 </page-query>
 
 <script>
-import PostHeader from '~/components/PostHeader'
+import Post from '~/components/Post'
 
 export default {
   components: {
-    PostHeader,
+    Post,
   },
   metaInfo () {
     return {

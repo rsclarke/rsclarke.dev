@@ -1,6 +1,7 @@
 ---
 title: Markdown test file
 date: 2019-07-06
+author: rsclarke
 published: true
 tags: ['Markdown','Test files']
 canonical_url: false

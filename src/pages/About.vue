@@ -1,5 +1,7 @@
 <template>
   <Layout>
+
+    <article class="About">
     
     <h1 class="text-green">about</h1>
 
@@ -45,6 +47,7 @@
       Thank you, <font-awesome-icon title="love" :icon="['fas', 'heart']" class="text-red"/> rsclarke.
     </p>
 
+    </article>
   </Layout>
 </template>
 
@@ -57,7 +60,5 @@ export default {
 </script>
 
 <style>
-h1, h2, h3, h4, h5, h6 {
-  @apply text-green;
-}
+
 </style>

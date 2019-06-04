@@ -1,9 +1,6 @@
 <template>
    <Layout>
-     <article>
-       <PostHeader :post="$page.article" />
-       <div v-html="$page.article.content" />
-     </article>
+     <Post :post="$page.article" />
    </Layout>
 </template>
 
@@ -14,6 +11,7 @@ query Article ($path: String!) {
     title
     description
     content
+    path
     timeToRead
     date (format: "YYYY/MM/DD")
     tags {
@@ -26,11 +24,11 @@ query Article ($path: String!) {
 </page-query>
 
 <script>
-import PostHeader from '~/components/PostHeader'
+import Post from '~/components/Post'
 
 export default {
   components: {
-    PostHeader,
+    Post,
   },
   metaInfo () {
     return {

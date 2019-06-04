@@ -23,6 +23,7 @@ module.exports = {
         typeName: 'Article',
         route: '/articles/:slug',
         refs: {
+          author: 'Author',
           tags: {
             typeName: 'Hashtag',
             route: '/hashtags/:id',
@@ -38,6 +39,7 @@ module.exports = {
         typeName: 'Vuln',
         route: '/vulns/:slug',
         refs: {
+          author: 'Author',
           tags: {
             typeName: 'Hashtag',
             route: '/hashtags/:id',

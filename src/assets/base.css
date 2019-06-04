@@ -1,5 +1,45 @@
 @tailwind base;
 
+img {
+    display: inline;
+}
+
+.Article h1,
+.Article h2,
+.Article h3,
+.Article h4,
+.Article h5,
+.Article h6 {
+    @apply text-red;
+}
+
+.Vuln h1,
+.Vuln h2,
+.Vuln h3,
+.Vuln h4,
+.Vuln h5,
+.Vuln h6 {
+    @apply text-yellow;
+}
+
+.Code h1,
+.Code h2,
+.Code h3,
+.Code h4,
+.Code h5,
+.Code h6 {
+    @apply text-blue;
+}
+
+.About h1,
+.About h2,
+.About h3,
+.About h4,
+.About h5,
+.About h6 {
+    @apply text-green;
+}
+
 .bg-img {
     background-image: url("../assets/bg.png");
     background-repeat: repeat;
@@ -15,7 +55,7 @@ blockquote {
 }
 
 p {
-    @apply tracking-wide text-justify leading-normal mb-4;
+    @apply tracking-wide text-justify text-xl leading-normal mb-4;
 }
 
 h1,h2,h3,h4,h5,h6 {

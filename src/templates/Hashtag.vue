@@ -30,6 +30,7 @@ query Tag($id: String!, $page: Int) {
             title
             description
             path
+            timeToRead
             date (format: "YYYY/MM/DD")
             tags {
                 id
@@ -42,6 +43,7 @@ query Tag($id: String!, $page: Int) {
               title
               description
               path
+              timeToRead
               date (format: "YYYY/MM/DD")
               tags {
                 id
