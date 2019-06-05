@@ -2,7 +2,7 @@
   <div>
   <div class="text-base mb-2" v-if="post.tags">
     <g-link
-      class="inline-block text-dark mr-1 bg-light rounded p-1"
+      class="inline-block text-dark mr-1 bg-light rounded p-1 leading-none"
       v-for="tag in post.tags"
       :key="tag.id"
       :to="tag.path"
