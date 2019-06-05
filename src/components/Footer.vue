@@ -1,7 +1,7 @@
 <template>
   <footer class="flex-wrap justify-center text-center text-light">
       <div>
-          Back through
+          Support through
           <a
             href="https://www.patreon.com/rsclarke"
             title="rsclarke on Patreon"
@@ -9,7 +9,7 @@
             class="text-light"
           >
             <font-awesome-icon :icon="['fab', 'patreon']"/>
-          </a> to support new content.
+          </a> for new content.
       </div>
       <div>
           Made with
