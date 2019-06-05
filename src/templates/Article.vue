@@ -13,6 +13,7 @@ query Article ($path: String!) {
     content
     path
     timeToRead
+    canonical_url
     date (format: "YYYY/MM/DD")
     tags {
       id
@@ -31,16 +32,27 @@ export default {
     Post,
   },
   metaInfo () {
-    return {
+    var meta = {
       title: this.$page.article.title,
       meta: [
         {
           key: 'description',
           name: 'description',
-          content: this.$page.article.description
+          content: this.$page.article.canonical_url
         }
       ]
     }
+
+    if (this.$page.article.canonical_url){
+      meta.link = [
+        { 
+          rel: 'canonical', 
+          href: this.$page.article.canonical_url 
+        }
+      ]
+    }
+
+    return meta
   }
 }
 </script>
