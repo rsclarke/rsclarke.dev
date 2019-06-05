@@ -15,7 +15,6 @@
     "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.3.2",
     "gridsome": "^0.6.3",
-    "moment": "^2.24.0",
     "postcss": "^7.0.16",
     "postcss-loader": "^3.0.0",
     "rehype-add-classes": "^1.0.0",
