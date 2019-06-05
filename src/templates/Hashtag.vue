@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="text-light"><font-awesome-icon :icon="['fas', 'hashtag']" class="mr-2 text-light"/>{{ $page.hashtag.title }}</h1>
+    <g-link :to="$page.hashtag.path"><h1 class="text-light"><font-awesome-icon :icon="['fas', 'hashtag']" class="mr-2 text-light"/>{{ $page.hashtag.title }}</h1></g-link>
     
       <div v-for="edge in $page.hashtag.belongsTo.edges" :key="edge.node.id">
           <PostHeader :post="edge.node" />
@@ -16,6 +16,7 @@
 query Tag($id: String!, $page: Int) {
   hashtag(id: $id) {
     title
+    path
     belongsTo(page: $page, perPage: 10) @paginate {
       totalCount
       pageInfo {
