@@ -87,35 +87,35 @@ code {
 }
 
 p > code {
-    @apply text-xl bg-light text-dark rounded p-1;
+    @apply text-xl bg-light text-dark rounded p-1 inline-block;
 } 
 
 td > code {
-    @apply text-xl bg-light text-dark rounded p-1;
+    @apply text-xl bg-light text-dark rounded p-1 inline-block;
 } 
 
 h1 > code {
-    @apply bg-light text-dark rounded p-1;
+    @apply bg-light text-dark rounded p-1 inline-block;
 }
 
 h2 > code {
-    @apply bg-light text-dark rounded p-1;
+    @apply bg-light text-dark rounded p-1 inline-block;
 }
 
 h3 > code {
-    @apply bg-light text-dark rounded p-1;
+    @apply bg-light text-dark rounded p-1 inline-block;
 }
 
 h4 > code {
-    @apply bg-light text-dark rounded p-1;
+    @apply bg-light text-dark rounded p-1 inline-block;
 }
 
 h5 > code {
-    @apply bg-light text-dark rounded p-1;
+    @apply bg-light text-dark rounded p-1 inline-block;
 }
 
 h6 > code {
-    @apply bg-light text-dark rounded p-1;
+    @apply bg-light text-dark rounded p-1 inline-block;
 }
 
 ul,ol {
