@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/rsclarke
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rsclarke.dev
+  * I am rsclarke (https://keybase.io/rsclarke) on keybase.
+  * I have a public key ASDNuaW7Q3U5aNnBPZvCGFwI3g3d6zLhl8qVtIEL4uK1-Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010176b990998fc095e89492453ce457d0b0be5f3cc2a09ddae375916a11c476bd850a",
+      "host": "keybase.io",
+      "kid": "0120cdb9a5bb43753968d9c13d9bc2185c08de0dddeb32e197ca95b4810be2e2b5f80a",
+      "uid": "5076fde4f46a61357590316512526c19",
+      "username": "rsclarke"
+    },
+    "merkle_root": {
+      "ctime": 1556364476,
+      "hash": "30321ecfd1c3fe1a38be3910d377c5e1fe0fac62958538e7c83b14ad303fb03aee19ff2e51b418f644a3868cf4fc56782806f20bcf60266a56fc994ae9aa50cd",
+      "hash_meta": "30efa93c9a2eae81b3025b38fbb087d0d63fc432f602f312914e51606ad426ed",
+      "seqno": 5252861
+    },
+    "service": {
+      "entropy": "5NSPsYjebdoTeWoVEH1V3Oki",
+      "hostname": "rsclarke.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1556364491,
+  "expire_in": 504576000,
+  "prev": "4b778e2d93fef6af51f88243a65d84bc9eb38e594e1769f6273d55a31f20c2b8",
+  "seqno": 29,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzbmlu0N1OWjZwT2bwhhcCN4N3esy4ZfKlbSBC+LitfgKp3BheWxvYWTESpcCHcQgS3eOLZP+9q9R+IJDpl2EvJ6zjllOF2n2Jz1Vox8gwrjEIH+3uNUyDZcrsDDuND6b/MYt2vOt54gPaq3C+JBnXo+lAgHCo3NpZ8RAs49vlHPBXOo7cYzrYMxRnFpK6Drd/v36rRPWUcE/FViWEVnDxEzPDJF2lyD0EyurMZdY2947MEwT5ovO9KJ7D6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMJbQWnYoJA8+e4x0ubVh1PU8PJ9Tg8AGyWnlkI9h3k/o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rsclarke
+
+==================================================================

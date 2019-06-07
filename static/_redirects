@@ -1,0 +1,7 @@
+# Redirect domain aliases to primary domain
+https://rsclarke.co.uk/* https://rsclarke.dev/:splat 301!
+https://rsclarke.com/* https://rsclarke.dev/:splat 301!
+https://rsclarke.io/* https://rsclarke.dev/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://rsclarke.netlify.com/* https://rsclarke.dev/:splat 301!
