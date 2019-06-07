@@ -3,7 +3,7 @@
 
     <h1 class="text-yellow">Vulns</h1>
     
-    <template v-if="$page.vulns.totalCount > 0">
+    <template v-if="displayVulns">
       <div v-for="edge in $page.vulns.edges" :key="edge.node.id">
           <PostHeader :post="edge.node" />
           <p>{{edge.node.description}} <g-link :to="edge.node.path">…continue</g-link></p>
@@ -12,13 +12,13 @@
       <Pageit :pageInfo="$page.vulns.pageInfo" />
     </template>
     <template v-else>
-      <p>No vulns found!</p>
+      <p>No public vulnerabilities disclosed yet.</p>
     </template>
 
   </Layout>
 </template>
 
-<page-query>
+<!--<page-query>
 query Vulns($page: Int) {
   vulns: allVuln(page: $page, perPage: 10) @paginate {
     totalCount
@@ -43,7 +43,7 @@ query Vulns($page: Int) {
     }    
   }
 }
-</page-query>
+</page-query>-->
 
 <script>
 import PostHeader from '~/components/PostHeader'
@@ -55,6 +55,11 @@ export default {
   metaInfo() {
     return {
       title: 'Latest Vulnerabilities'
+    }
+  },
+  data() {
+    return {
+      displayVulns: false
     }
   }
 }

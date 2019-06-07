@@ -41,19 +41,19 @@ query Entries($page: Int) {
                 path
             }
           }
-          ... on Vuln {
-              id
-              title
-              content
-              path
-              timeToRead
-              date (format: "YYYY/MM/DD")
-              tags {
-                id
-                title
-                path
-            }
-          }
+#          ... on Vuln {
+#              id
+#              title
+#              content
+#              path
+#              timeToRead
+#              date (format: "YYYY/MM/DD")
+#              tags {
+#                id
+#                title
+#                path
+#              }
+#          }
         }
       }
     }

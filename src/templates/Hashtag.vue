@@ -39,19 +39,19 @@ query Tag($id: String!, $page: Int) {
                 path
             }
           }
-          ... on Vuln {
-              id
-              title
-              description
-              path
-              timeToRead
-              date (format: "YYYY/MM/DD")
-              tags {
-                id
-                title
-                path
-            }
-          }
+#          ... on Vuln {
+#              id
+#              title
+#              description
+#              path
+#              timeToRead
+#              date (format: "YYYY/MM/DD")
+#              tags {
+#                id
+#                title
+#                path
+#              }
+#          }
         }
       }
     }
