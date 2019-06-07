@@ -31,7 +31,7 @@
         <a href="/feed.atom" title="rsclarke.dev atom feed" class="text-light text-sm">
           <font-awesome-icon :icon="['fas', 'rss']"/>
         </a> &nbsp;
-        <a href="#" title="Sitemap" class="text-light text-sm">
+        <a href="/sitemap.xml" title="Sitemap" class="text-light text-sm">
           <font-awesome-icon :icon="['fas', 'sitemap']"/>
         </a>
       </div>

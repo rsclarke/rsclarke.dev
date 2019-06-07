@@ -105,6 +105,45 @@ module.exports = {
           content: toHTML(node.content)
         })
       }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000,
+        exclude: [],
+        config: {
+          '/articles/*': {
+            changefreq: 'weekly',
+            priority: 0.8
+          },
+          '/vulns/*': {
+            changefreq: 'weekly',
+            priority: 0.8
+          },
+          '/hashtags/*': {
+            changefreq: 'weekly',
+            priority: 0.7
+          },
+          '/code': {
+            changefreq: 'monthly',
+            priority: 0.5
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7
+          }
+        },
+        staticUrls: [
+          {
+            url: '/feed.atom',
+            title: 'Atom feed'
+          },
+          {
+            url: '/rss.xml',
+            title: 'RSS feed'
+          }
+        ]
+      }
     }
   ],
   transformers: {
