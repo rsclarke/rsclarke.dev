@@ -23,4 +23,18 @@ export default function (Vue, { router, head, isClient }) {
   head.bodyAttrs = {
     class: 'bg-dark bg-img font-mono text-light p-4'
   }
+
+  head.link.push({
+    rel: 'alternative',
+    type: 'application/rss+xml',
+    title: 'rsclarke.dev',
+    href: "https://rsclarke.dev/rss.xml"
+  })
+
+  head.link.push({
+    rel: 'alternative',
+    type: 'application/atom+xml',
+    title: 'rsclarke.dev',
+    href: "https://rsclarke.dev/feed.atom"
+  })
 }

@@ -28,7 +28,7 @@
         <g-link to="/hashtags" class="text-light text-sm">
            <font-awesome-icon :icon="['fas', 'hashtag']"/>
         </g-link> &nbsp;
-        <a href="#" title="RSS" class="text-light text-sm">
+        <a href="/feed.atom" title="rsclarke.dev atom feed" class="text-light text-sm">
           <font-awesome-icon :icon="['fas', 'rss']"/>
         </a> &nbsp;
         <a href="#" title="Sitemap" class="text-light text-sm">

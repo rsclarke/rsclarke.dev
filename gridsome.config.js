@@ -9,6 +9,19 @@ const tailwind = require('tailwindcss')
 const stringify = require('rehype-stringify')
 const path = require('path')
 
+const unified = require('unified')
+const markdown = require('remark-parse')
+const r2r = require('remark-rehype')
+
+function toHTML(content){
+  return unified()
+    .use(markdown)
+    .use(r2r)
+    .use(stringify)
+    .processSync(content)
+    .toString()
+}
+
 module.exports = {
   siteName: 'rsclarke.dev',
   siteUrl: 'https://rsclarke.dev',
@@ -46,6 +59,51 @@ module.exports = {
             create: true,
           }
         }
+      }
+    },
+    {
+      use: 'gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Article'], //extend with Vuln
+        feedOptions: {
+          title: 'rsclarke.dev',
+          description: 'Security research and tech articles published by Richard Clarke (@rsclarke)',
+          id: "https://rsclarke.dev",
+          link: "https://rsclarke.dev",
+          language: 'en',
+          image: "https://rsclarke.dev/me.jpg",
+          favicon: "https://rsclarke.dev/me.jpg",
+          copyright: "Creative Commons - Attribution 4.0 International (CC-BY 4.0)",
+          feedLinks: {
+            atom: "https://rsclarke.dev/feed.atom"
+          },
+          author: {
+            name: "rsclarke",
+            email: "rsclrk@pm.me",
+            link: "https://rsclarke.dev"
+          }
+        },
+        rss: {
+          enabled: true,
+          output: '/rss.xml'
+        },
+        atom: {
+          enabled: true,
+          output: '/feed.atom'
+        },
+        json: {
+          enabled: false,
+          output: '/feed.json'
+        },
+        maxItems: 15,
+        htmlFields: ['content'],
+        filterNodes: (node) => true,
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          date: node.date,
+          description: node.description,
+          content: toHTML(node.content)
+        })
       }
     }
   ],
