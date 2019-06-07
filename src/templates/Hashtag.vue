@@ -4,7 +4,7 @@
     
       <div v-for="edge in $page.hashtag.belongsTo.edges" :key="edge.node.id">
           <PostHeader :post="edge.node" />
-          <p>{{edge.node.description}} <g-link :to="edge.node.path">…continue</g-link></p>
+          <p>{{edge.node.description}}<g-link :to="edge.node.path"> …read more >></g-link></p>
       </div>
 
       <Pageit :pageInfo="$page.hashtag.belongsTo.pageInfo" />

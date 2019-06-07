@@ -6,7 +6,7 @@
     <template v-if="$page.articles.totalCount > 0">
       <div v-for="edge in $page.articles.edges" :key="edge.node.id">
           <PostHeader :post="edge.node" />
-          <p>{{edge.node.description}} <g-link :to="edge.node.path">…continue</g-link></p>
+          <p>{{edge.node.description}}<g-link :to="edge.node.path"> …read more >></g-link></p>
       </div>
 
       <Pageit :pageInfo="$page.articles.pageInfo" />
