@@ -79,7 +79,7 @@ h4,h5,h6 {
 }
 
 pre {
-    @apply p-4 mb-4 text-xl;
+    @apply p-4 mb-4 text-xl overflow-x-scroll;
 }
 
 code {
