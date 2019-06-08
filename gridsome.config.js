@@ -149,6 +149,7 @@ module.exports = {
   ],
   transformers: {
     remark: {
+      externalLinksTarget: '_self',
       externalLinksRel: ['noopener', 'noreferrer'],
       stringifier: stringify,
       plugins: [
