@@ -2,11 +2,11 @@ module.exports = {
   theme: {
     colors: {
       'transparent': 'transparent',
-    
+
       'dark': '#2A2A2A',
       'grey': '#808080',
       'light': '#D9D9D9',
-    
+
       'red': '#F89E8C',
       'green': '#83C3A2',
       'blue': '#88B8FB',
@@ -41,13 +41,13 @@ module.exports = {
         'serif',
       ],
       'mono': [
-        'Ubuntu Mono'
-  /*      'Menlo',
+        'Ubuntu Mono',
+        'Menlo',
         'Monaco',
         'Consolas',
         'Liberation Mono',
         'Courier New',
-        'monospace',*/
+        'monospace',
       ],
     },
 

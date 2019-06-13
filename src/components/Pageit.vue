@@ -17,6 +17,6 @@ export default {
 
 <style>
 #pager .active {
-  @apply text-light
+  @apply text-light;
 }
 </style>
