@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto md:pr-24">
+  <div class="container mx-auto">
 
     <Header />
 
@@ -7,7 +7,7 @@
       <slot/>
     </div>
 
-    <div class="md:ml-32 pl-4 pt-4">
+    <div class="md:ml-32 mk:pl-4 pt-4">
       <Footer />
     </div>
     

@@ -62,12 +62,13 @@
     </div>
 
     <!-- menu -->
-    <div class="md:ml-auto pt-4 md:pt-0">
-      <nav class="text-xl">
-        <g-link to="/articles" class="text-red">articles</g-link>
-        <g-link to="/vulns" class="text-yellow ml-8">vulns</g-link>
-        <g-link to="/code" class="text-blue ml-8">code</g-link>
-        <g-link to="/about" class="text-green ml-8">about</g-link>
+    <div class="md:ml-auto pt-4 md:pt-0 sm:justify-center">
+      <nav class="text-xl text-center">
+        <g-link to="/articles" class="text-red inline-block">articles</g-link>
+        <g-link to="/vulns" class="text-yellow ml-8 inline-block">vulns</g-link>
+        <g-link to="/code" class="text-blue ml-8 inline-block">code</g-link>
+        <g-link to="/about" class="text-green ml-8 inline-block">about</g-link>
+        <a href="https://kb.rsclarke.dev" target="_blank" title="Knowledge Base" class="inline-block ml-8 text-light">kb<sup><font-awesome-icon class="text-blue" size="xs" :icon="['fas', 'external-link-alt']"/></sup></a>
       </nav>
     </div>
   </header>
