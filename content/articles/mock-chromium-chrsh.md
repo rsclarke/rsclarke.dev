@@ -1,5 +1,6 @@
 ---
 title: Using Mock for chroot Chromium Builds
+slug: using-mock-for-chroot-chromium-builds
 author: rsclarke
 date: 2018-07-03
 tags: [mock, chroot, chromium]

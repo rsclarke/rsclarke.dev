@@ -29,18 +29,21 @@ module.exports = {
   siteDescription: 'Security research published by Richard Clarke (@rsclarke)',
   titleTemplate: '%s - Richard Clarke (@rsclarke)',
   icon: 'src/assets/me.jpg',
+  templates: {
+    Article: '/articles/:slug',
+    Vuln: '/vulns/:slug',
+    Hashtag: '/hashtags/:id',
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'content/articles/**/*.md',
         typeName: 'Article',
-        route: '/articles/:slug',
         refs: {
           author: 'Author',
           tags: {
             typeName: 'Hashtag',
-            route: '/hashtags/:id',
             create: true,
           }
         }
@@ -51,12 +54,10 @@ module.exports = {
       options: {
         path: 'content/vulns/**/*.md',
         typeName: 'Vuln',
-        route: '/vulns/:slug',
         refs: {
           author: 'Author',
           tags: {
             typeName: 'Hashtag',
-            route: '/hashtags/:id',
             create: true,
           }
         }

@@ -13,7 +13,7 @@
 </template>
 
 <page-query>
-query Tag($id: String!, $page: Int) {
+query Tag($id: ID!, $page: Int) {
   hashtag(id: $id) {
     title
     path
