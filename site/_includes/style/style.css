@@ -1,0 +1,163 @@
+@font-face {
+  font-family: Ubuntu Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local("Ubuntu Mono Regular "), local("Ubuntu Mono-Regular"),
+    url(/assets/ubuntu-mono-latin-400.woff2) format("woff2"), url(/assets/ubuntu-mono-latin-400.woff) format("woff");
+}
+
+img {
+  display: inline;
+}
+
+.Article h1,
+.Article h2,
+.Article h3,
+.Article h4,
+.Article h5,
+.Article h6 {
+  @apply text-red;
+}
+
+.Vuln h1,
+.Vuln h2,
+.Vuln h3,
+.Vuln h4,
+.Vuln h5,
+.Vuln h6 {
+  @apply text-yellow;
+}
+
+.Code h1,
+.Code h2,
+.Code h3,
+.Code h4,
+.Code h5,
+.Code h6 {
+  @apply text-blue;
+}
+
+.About h1,
+.About h2,
+.About h3,
+.About h4,
+.About h5,
+.About h6 {
+  @apply text-green;
+}
+
+.bg-img {
+  background-image: url("/assets/bg.png");
+  background-repeat: repeat;
+}
+
+a {
+  text-decoration: none;
+  @apply text-blue;
+}
+
+blockquote {
+  @apply ml-4 pl-4 pr-8 mb-4 border-l-4 border-light border-solid rounded;
+}
+
+p {
+  @apply tracking-wide text-justify text-xl leading-normal mb-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply tracking-wider font-normal mb-4;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4,
+h5,
+h6 {
+  @apply text-xl font-medium;
+}
+
+pre {
+  @apply p-4 mb-4 text-xl overflow-x-auto;
+}
+
+code {
+  @apply font-mono;
+}
+
+p > code {
+  @apply text-xl bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+td > code {
+  @apply text-xl bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+h1 > code {
+  @apply bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+h2 > code {
+  @apply bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+h3 > code {
+  @apply bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+h4 > code {
+  @apply bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+h5 > code {
+  @apply bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+h6 > code {
+  @apply bg-light text-dark rounded p-1 inline-block leading-none;
+}
+
+ul,
+ol {
+  @apply mb-4 ml-8;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+hr {
+  @apply border-2 rounded border-light border-solid;
+}
+
+table {
+  @apply table-auto border-collapse w-full mb-4;
+}
+
+th,
+td {
+  @apply text-left border-b border-grey border-solid;
+}
+
+tr {
+  @apply leading-loose;
+}

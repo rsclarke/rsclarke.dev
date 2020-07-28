@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body class="bg-dark bg-img font-mono text-light p-4">
+    <div class="container mx-auto">
+      {% include 'components/header.njk' %}
+
+      <div class="md:ml-32 md:pl-4 pt-2 pb-2 text-xl">
+        {% block content %} {% endblock %}
+      </div>
+
+      <div class="md:ml-32 mk:pl-4 pt-4">
+        {% include 'components/footer.njk' %}
+      </div>
+    </div>
+  </body>
+</html>

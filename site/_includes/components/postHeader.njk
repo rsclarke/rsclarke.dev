@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <h1 class="mb-2">{{ title }}</h1>
+  </div>
+
+  <div>
+    <div class="text-base mb-2">
+      {% for tag in tags %}
+      <a href="/hashtags/{{ tag }}" class="inline-block text-dark mr-1 bg-light rounded p-1 leading-none">{% fontawesomeIcon 'fas', 'hashtag', 'text-dark', 'text-sm', 'ml-1', 'mr-1' %}{{ tag }}</a>
+      {% endfor %}
+    </div>
+    <div class="mb-4">
+      <p class="text-base text-grey">Published: {{ date }}</p>
+    </div>
+  </div>
+</div>

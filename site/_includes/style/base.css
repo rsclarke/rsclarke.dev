@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+
+@import "./style.css";
+@import "@fortawesome/fontawesome-svg-core/styles.css";
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

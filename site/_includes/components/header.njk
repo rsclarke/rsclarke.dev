@@ -1,0 +1,64 @@
+<header class="flex flex-wrap items-center justify-center md:justify-start">
+
+    <!-- logo -->
+    <div class="flex-no-shrink">
+      <a href="/">
+        <img src="/assets/me.jpg" class="border-4 border-light border-solid rounded-full h-32 w-32 p-1" />
+      </a>
+    </div>
+
+
+    <!-- flex-col so social icons space out to width of name -->
+    <div class="flex-col ml-4 sm:justify-center">
+
+      <!-- name -->
+      <div>
+        <a href="/" class="text-4xl tracking-wider text-light">rsclarke</a>
+      </div>
+
+      <!-- social icons -->
+      <div>
+        <aside class="text-2xl flex justify-between pl-1 pr-1">
+          <a
+            href="https://github.com/rsclarke"
+            title="@rsclarke on GitHub"
+            rel="noopener noreferrer"
+            class="text-red"
+          >
+          {% fontawesomeIcon 'fab', 'github' %}
+          </a>
+          <a
+            href="https://dev.to/rsclarke"
+            title="@rsclarke on DEV"
+            rel="noopener noreferrer"
+            class="text-yellow"
+          >
+            {% fontawesomeIcon 'fab', 'dev' %}
+          </a>
+          <a
+            href="https://twitter.com/rsclarke"
+            title="@rsclarke on Twitter"
+            rel="noopener noreferrer"
+            class="text-blue"
+          >
+            {% fontawesomeIcon 'fab', 'twitter' %}
+          </a>
+          <a
+            href="https://keybase.io/rsclarke"
+            title="rsclarke on Keybase"
+            rel="noopener noreferrer"
+            class="text-green"
+          >
+            {% fontawesomeIcon 'fab', 'keybase' %}
+          </a>
+        </aside>
+      </div>
+    </div>
+
+    <!-- menu -->
+    <div class="md:ml-auto pt-4 md:pt-0 sm:justify-center">
+      <nav class="text-xl text-center">
+        <a href="/articles" class="text-red inline-block">articles</a><a href="/vulns" class="text-yellow ml-8 inline-block">vulns</a><a href="/code" class="text-blue ml-8 inline-block">code</a><a href="/about" class="text-green ml-8 inline-block">about</a><a href="https://kb.rsclarke.dev" target="_blank" title="Knowledge Base" class="inline-block ml-8 text-light">kb<sup>{% fontawesomeIcon 'fas', 'external-link-alt', 'text-blue', 'fa-xs' %}</sup></a>
+      </nav>
+    </div>
+  </header>
