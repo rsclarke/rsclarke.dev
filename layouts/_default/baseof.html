@@ -1,0 +1,29 @@
+{{ $me := resources.Get "me.png" }}
+{{ $ico := resources.Get "favicon.ico" }}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ $me.RelPermalink }}">
+  <link rel="shortcut icon" href="{{ $ico.RelPermalink }}">
+  {{- partialCached "css.html" .}}
+</head>
+
+<body class="bg-zinc-100 prose max-w-none prose-lg">
+  <div class="container max-w-4xl mx-auto px-6 flex flex-col justify-between h-screen">
+    <header class="mt-8 mb-8">
+      {{- partial "header.html" . }}
+    </header>
+    <main class="mb-auto">
+      {{- block "main" .}}{{end}}
+    </main>
+    <footer>
+      {{- partial "footer.html" . }}
+    </footer>
+  </div>
+</body>
+
+</html>

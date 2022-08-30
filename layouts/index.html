@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h2 class="mt-0">Articles</h2>
+<ul>
+    {{ range (where .Site.RegularPages "Type" "articles") }}
+    {{ .Render "li" }}
+    {{end}}
+</ul>
+<h2>Projects</h2>
+<ul>
+    <li>
+        <a href="https://registry.terraform.io/namespaces/rsclarke">Terraform Modules</a>
+    </li>
+</ul>
+{{ end }}

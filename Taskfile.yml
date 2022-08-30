@@ -1,0 +1,33 @@
+version: '3'
+
+tasks:
+  build:
+    deps: [deps:install]
+    cmds:
+      - hugo
+
+  serve:
+    deps: [deps:install]
+    cmds:
+      - hugo serve --disableFastRender
+
+  clean:
+    cmds:
+      - rm -rf public resources .hugo_build.lock node_modules
+
+  publish:
+    deps: [build]
+    cmds:
+      - npx wrangler pages publish --project-name="rsclarke" ./public
+
+  deps:install:
+    cmds:
+      - npm install
+    sources:
+      - package.json
+      - package-lock.json
+
+  deps:update:
+    cmds:
+      - npx npm-check-updates -u
+      - task: deps:install
