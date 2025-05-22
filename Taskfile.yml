@@ -11,7 +11,7 @@ tasks:
 
   clean:
     cmds:
-      - rm -rf public .hugo_build.lock hugo_stats.json
+      - rm -rf public .hugo_build.lock hugo_stats.json .wrangler
 
   publish:
     deps: [build]
