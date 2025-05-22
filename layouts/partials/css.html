@@ -1,8 +1,17 @@
-{{ $tw := resources.Get "tw.css" }}
-{{ $inter := resources.Get "inter.css" | resources.ExecuteAsTemplate "inter.css" . | resources.ToCSS }}
-{{ $css := slice $tw $inter | resources.Concat "style.css" | resources.PostCSS }}
-{{ if .Site.IsServer }}
-{{ $css = $css | resources.ExecuteAsTemplate (printf "styles.dev.%v.css" now.UnixMilli) . }}
+{{ with (templates.Defer (dict "key" "global")) }}
+  {{ with resources.Get "style.css" }}
+    {{ $opts := dict
+    "minify" (not hugo.IsDevelopment)
+    "inlineImports" true
+    }}
+    {{ with . | css.TailwindCSS $opts }}
+	    {{ if hugo.IsDevelopment }}
+	        <link rel="stylesheet" href="{{ .RelPermalink }}">
+	    {{ else }}
+	        {{ with . | fingerprint }}
+	            <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+	        {{ end }}
+		{{ end }}
+    {{ end }}
+  {{ end }}
 {{ end }}
-{{ $css = $css | resources.Minify | resources.Fingerprint | resources.PostProcess }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

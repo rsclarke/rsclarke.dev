@@ -1,5 +1,4 @@
 .task
 .hugo_build.lock
-node_modules/
 public/
-resources/
+hugo_stats.json

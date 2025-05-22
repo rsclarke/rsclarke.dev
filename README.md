@@ -1,3 +1,3 @@
 # rsclarke.dev
 
-Personal website of Richard Clarke (@rsclarke) built using [hugo](https://gohugo.io) and [tailwindcss](https://tailwindcss.com).
+Personal website of Richard Clarke (@rsclarke) built using [Hugo](https://gohugo.io) with built-in [Tailwind CSS](https://tailwindcss.com) processing.
