@@ -1,0 +1,31 @@
+{{ define "main" }}
+<h1 class="mt-0">{{ .Title }}</h1>
+
+{{ with .Description }}
+  <p class="text-zinc-600 dark:text-zinc-400">{{ . }}</p>
+{{ end }}
+
+{{ with .Content }}
+  <div class="my-6">
+    {{ . }}
+  </div>
+{{ end }}
+
+<ul>
+  {{ range .Pages.ByDate.Reverse }}
+    <li class="mb-4">
+      <div>
+        <a href="{{ .RelPermalink }}" class="font-medium">{{ .Title }}</a>
+        {{ with .Description }}
+          <div class="text-sm text-zinc-600 dark:text-zinc-400">{{ . }}</div>
+        {{ end }}
+        <div class="text-xs text-zinc-500 dark:text-zinc-400">
+          {{ .Date.Format "2 January 2006" }}
+        </div>
+      </div>
+    </li>
+  {{ end }}
+</ul>
+
+<p><a href="/" class="text-sm">&larr; Back to Home</a></p>
+{{ end }}

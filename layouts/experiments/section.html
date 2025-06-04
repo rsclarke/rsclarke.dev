@@ -1,0 +1,40 @@
+{{ define "main" }}
+<article>
+  <h1 class="mt-0">{{ .Title }}</h1>
+  
+  {{ with .Description }}
+    <p class="text-zinc-600 dark:text-zinc-400">{{ . }}</p>
+  {{ end }}
+  
+  {{ with .Content }}
+    <div class="my-6">
+      {{ . }}
+    </div>
+  {{ end }}
+  
+  <div class="mt-6">
+    <h2>All Posts in This Series</h2>
+    <ul class="pl-0">
+      {{ range .Pages.ByDate }}
+        <li class="mb-4 list-none">
+          <div class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-2 items-start">
+            <span class="text-sm text-zinc-500 dark:text-zinc-400 whitespace-nowrap">
+              {{ .Date.Format "2 January 2006" }}
+            </span>
+            <div>
+              <a href="{{ .RelPermalink }}" class="font-medium">{{ .Title }}</a>
+              {{ with .Description }}
+                <div class="text-sm text-zinc-600 dark:text-zinc-400">{{ . }}</div>
+              {{ end }}
+            </div>
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  
+  <p class="mt-8">
+    <a href="/experiments/" class="text-sm">&larr; Back to All Experiments</a>
+  </p>
+</article>
+{{ end }}

@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h2 class="mt-0">Experiments</h2>
+<p>Series of connected posts exploring specific topics:</p>
+
+<ul>
+  {{ range .Sections }}
+    <li class="mb-4">
+      <div>
+        <a href="{{ .RelPermalink }}" class="font-semibold">{{ .Title }}</a>
+        {{ with .Description }}
+          <div class="text-sm text-zinc-600 dark:text-zinc-400">{{ . }}</div>
+        {{ end }}
+        <div class="text-xs text-zinc-500 dark:text-zinc-400">
+          {{ len .Pages }} posts · Started {{ .Date.Format "2 January 2006" }}
+        </div>
+      </div>
+    </li>
+  {{ end }}
+</ul>
+
+<p><a href="/">Back to Home</a></p>
+{{ end }}

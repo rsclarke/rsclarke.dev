@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article>
+  <h1 class="mt-0">{{ .Title }}</h1>
+  
+  <p class="text-sm text-zinc-500 dark:text-zinc-400">
+    {{ .Date.Format "2 January 2006" }}
+  </p>
+  
+  {{ with .Description }}
+    <p class="text-zinc-600 dark:text-zinc-400">{{ . }}</p>
+  {{ end }}
+  
+  {{ .Content }}
+  
+  {{ $currentPage := . }}
+  {{ $section := .CurrentSection }}
+  
+  <!-- Only show navigation if this isn't the section page itself -->
+  {{ if ne $currentPage $section }}
+    <div class="mt-8 p-4 border border-zinc-200 dark:border-zinc-700 rounded">
+      <h3 class="mt-0">{{ $section.Title }}</h3>
+      <p class="text-sm mb-4">This post is part of an experiment series:</p>
+      
+      <ol class="list-decimal pl-6">
+        {{ range $section.Pages.ByDate }}
+          <li class="mb-2">
+            {{ if eq .Permalink $currentPage.Permalink }}
+              <span class="font-semibold">{{ .Title }}</span>
+              <span class="text-xs text-zinc-500 dark:text-zinc-400">(current)</span>
+            {{ else }}
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              <span class="text-xs text-zinc-500 dark:text-zinc-400">({{ .Date.Format "2 Jan 2006" }})</span>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ol>
+      
+      <div class="mt-4 text-sm">
+        <a href="{{ $section.Permalink }}">&larr; View series overview</a>
+      </div>
+    </div>
+  {{ end }}
+</article>
+{{ end }}
