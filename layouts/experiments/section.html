@@ -4,12 +4,15 @@
 
     {{ if eq .RelPermalink "/experiments/" }}
         <!-- Top-level experiments page - show experiment list -->
+        <h2>All Experiments</h2>
         {{ if .Pages }}
             <ul class="">
                 {{ range .Pages.ByDate.Reverse }}
                     {{ .Render "li" }}
                 {{ end }}
             </ul>
+        {{ else }}
+            <p>No experiments yet.</p>
         {{ end }}
     {{ else }}
         <!-- Individual experiment page - show posts list -->

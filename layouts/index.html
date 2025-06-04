@@ -6,13 +6,22 @@
     {{end}}
 </ul>
 <h2>Experiments</h2>
+{{ $experiments := where .Site.Pages "Section" "experiments" }}
+{{ $filteredExperiments := slice }}
+{{ range $experiments }}
+    {{ if and (ne .RelPermalink "/experiments/") (eq .Kind "section") }}
+        {{ $filteredExperiments = $filteredExperiments | append . }}
+    {{ end }}
+{{ end }}
+{{ if $filteredExperiments }}
 <ul>
-    {{ range where .Site.Pages "Section" "experiments" }}
-        {{ if and (ne .RelPermalink "/experiments/") (eq .Kind "section") }}
-            {{ .Render "li" }}
-        {{ end }}
+    {{ range $filteredExperiments }}
+        {{ .Render "li" }}
     {{ end }}
 </ul>
+{{ else }}
+<p>No experiments yet</p>
+{{ end }}
 <h2>Projects</h2>
 <ul>
     <li>
