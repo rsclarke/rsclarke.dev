@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article>
+  {{ .Content }}
+  
+  {{ $currentPage := . }}
+  {{ $section := .CurrentSection }}
+  
+  <!-- Only show navigation if this isn't the section page itself -->
+  {{ if ne $currentPage $section }}
+    <div class="mt-8 p-4 border border-zinc-200 dark:border-zinc-700 rounded">
+      <h3 class="mt-0"><a href="{{ $section.Permalink }}">Experiment: {{ $section.Title }}</a></h3>
+      <p class="text-sm mb-4">{{ $section.Description }}</p>
+      
+      {{ $pages := $section.Pages.ByDate }}
+      {{ $currentIndex := 0 }}
+      {{ range $i, $page := $pages }}
+        {{ if eq $page.Permalink $currentPage.Permalink }}
+          {{ $currentIndex = $i }}
+        {{ end }}
+      {{ end }}
+      
+      <div class="flex justify-between items-center">
+        <div>
+          {{ if gt $currentIndex 0 }}
+            {{ $prevPage := index $pages (sub $currentIndex 1) }}
+            <a href="{{ $prevPage.Permalink }}" class="text-sm">&larr; {{ $prevPage.Title }}</a>
+          {{ else }}
+            <span class="text-sm text-zinc-400 dark:text-zinc-500">&larr; Previous</span>
+          {{ end }}
+        </div>
+        
+        <div>
+          {{ if lt $currentIndex (sub (len $pages) 1) }}
+            {{ $nextPage := index $pages (add $currentIndex 1) }}
+            <a href="{{ $nextPage.Permalink }}" class="text-sm">{{ $nextPage.Title }} &rarr;</a>
+          {{ else }}
+            <span class="text-sm text-zinc-400 dark:text-zinc-500">Next &rarr;</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</article>
+{{ end }}

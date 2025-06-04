@@ -1,7 +1,7 @@
 baseURL = 'https://rsclarke.dev/'
 languageCode = 'en-us'
 title = 'Richard Clarke (@rsclarke)'
-disableKinds = ["section", "taxonomy", "term", "RSS"]
+disableKinds = ["RSS", "taxonomy", "term"]
 
 [build]
 [build.buildStats]
