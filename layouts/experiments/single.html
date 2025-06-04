@@ -1,15 +1,5 @@
 {{ define "main" }}
 <article>
-  <h1 class="mt-0">{{ .Title }}</h1>
-  
-  <p class="text-sm text-zinc-500 dark:text-zinc-400">
-    {{ .Date.Format "2 January 2006" }}
-  </p>
-  
-  {{ with .Description }}
-    <p class="text-zinc-600 dark:text-zinc-400">{{ . }}</p>
-  {{ end }}
-  
   {{ .Content }}
   
   {{ $currentPage := . }}
@@ -18,25 +8,35 @@
   <!-- Only show navigation if this isn't the section page itself -->
   {{ if ne $currentPage $section }}
     <div class="mt-8 p-4 border border-zinc-200 dark:border-zinc-700 rounded">
-      <h3 class="mt-0">{{ $section.Title }}</h3>
-      <p class="text-sm mb-4">This post is part of an experiment series:</p>
+      <h3 class="mt-0"><a href="{{ $section.Permalink }}">Experiment: {{ $section.Title }}</a></h3>
+      <p class="text-sm mb-4">{{ $section.Description }}</p>
       
-      <ol class="list-decimal pl-6">
-        {{ range $section.Pages.ByDate }}
-          <li class="mb-2">
-            {{ if eq .Permalink $currentPage.Permalink }}
-              <span class="font-semibold">{{ .Title }}</span>
-              <span class="text-xs text-zinc-500 dark:text-zinc-400">(current)</span>
-            {{ else }}
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-              <span class="text-xs text-zinc-500 dark:text-zinc-400">({{ .Date.Format "2 Jan 2006" }})</span>
-            {{ end }}
-          </li>
+      {{ $pages := $section.Pages.ByDate }}
+      {{ $currentIndex := 0 }}
+      {{ range $i, $page := $pages }}
+        {{ if eq $page.Permalink $currentPage.Permalink }}
+          {{ $currentIndex = $i }}
         {{ end }}
-      </ol>
+      {{ end }}
       
-      <div class="mt-4 text-sm">
-        <a href="{{ $section.Permalink }}">&larr; View series overview</a>
+      <div class="flex justify-between items-center">
+        <div>
+          {{ if gt $currentIndex 0 }}
+            {{ $prevPage := index $pages (sub $currentIndex 1) }}
+            <a href="{{ $prevPage.Permalink }}" class="text-sm">&larr; {{ $prevPage.Title }}</a>
+          {{ else }}
+            <span class="text-sm text-zinc-400 dark:text-zinc-500">&larr; Previous</span>
+          {{ end }}
+        </div>
+        
+        <div>
+          {{ if lt $currentIndex (sub (len $pages) 1) }}
+            {{ $nextPage := index $pages (add $currentIndex 1) }}
+            <a href="{{ $nextPage.Permalink }}" class="text-sm">{{ $nextPage.Title }} &rarr;</a>
+          {{ else }}
+            <span class="text-sm text-zinc-400 dark:text-zinc-500">Next &rarr;</span>
+          {{ end }}
+        </div>
       </div>
     </div>
   {{ end }}
