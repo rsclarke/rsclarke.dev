@@ -1,7 +1,7 @@
 ---
 title: "Experiments"
 description: "Series of connected posts exploring specific topics in depth"
-date: 2023-11-01
+date: 2025-06-04
 ---
 
 # Experiments
