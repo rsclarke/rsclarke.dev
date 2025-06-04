@@ -1,40 +1,31 @@
 {{ define "main" }}
 <article>
-  <h1 class="mt-0">{{ .Title }}</h1>
-  
-  {{ with .Description }}
-    <p class="text-zinc-600 dark:text-zinc-400">{{ . }}</p>
-  {{ end }}
-  
-  {{ with .Content }}
-    <div class="my-6">
-      {{ . }}
-    </div>
-  {{ end }}
-  
-  <div class="mt-6">
-    <h2>All Posts in This Series</h2>
-    <ul class="pl-0">
-      {{ range .Pages.ByDate }}
-        <li class="mb-4 list-none">
-          <div class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-2 items-start">
-            <span class="text-sm text-zinc-500 dark:text-zinc-400 whitespace-nowrap">
-              {{ .Date.Format "2 January 2006" }}
-            </span>
-            <div>
-              <a href="{{ .RelPermalink }}" class="font-medium">{{ .Title }}</a>
-              {{ with .Description }}
-                <div class="text-sm text-zinc-600 dark:text-zinc-400">{{ . }}</div>
-              {{ end }}
-            </div>
-          </div>
-        </li>
-      {{ end }}
-    </ul>
-  </div>
-  
-  <p class="mt-8">
-    <a href="/experiments/" class="text-sm">&larr; Back to All Experiments</a>
-  </p>
+    {{ .Content }}
+
+    {{ if eq .RelPermalink "/experiments/" }}
+        <!-- Top-level experiments page - show experiment list -->
+        {{ if .Pages }}
+            <ul class="">
+                {{ range .Pages.ByDate.Reverse }}
+                    {{ .Render "li" }}
+                {{ end }}
+            </ul>
+        {{ end }}
+    {{ else }}
+        <!-- Individual experiment page - show posts list -->
+        {{ if .Pages }}
+            <h2>Posts</h2>
+            <ol class="list-decimal">
+                {{ range .Pages.ByDate }}
+                <li class="">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <span class="text-xs text-zinc-500 dark:text-zinc-400"
+                        >({{ .Date.Format "2 Jan 2006" | upper }})</span
+                    >
+                </li>
+                {{ end }}
+            </ol>
+        {{ end }}
+    {{ end }}
 </article>
 {{ end }}
